@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Home page  */
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(135, 125, 125, 0.3),
+      rgba(145, 137, 151, 0.3)
+    ),
+    url(images/manali.jpg);
+
+  background-size: cover;
+  animation: changecontent 7s infinite linear;
+}
+nav {
+  width: 100%;
+  height: 8vh;
+  background-color: white;
+  border-bottom: 2px;
+  display: flex !important;
+  justify-content: right;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.logo {
+  position: absolute;
+  color: orange;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  left: 15%;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: black;
+}
+.logo p {
+  display: inline;
+  font-size: 1.4rem;
+}
+.logo p:hover {
+  text-shadow: 0 2px 3px #121212;
+  transition: text-shadow ease-in-out 0.5s;
+}
+nav ul {
+  margin-top: 1rem;
+  margin-right: 140px;
+  float: right;
+}
+
+nav ul a {
+  margin-right: 3rem;
+  text-decoration: none !important;
+  color: black;
+  font-weight: bold;
+}
+nav ul a:hover {
+  color: blue;
+  border-bottom: 3px solid blue;
+  padding-bottom: 12px;
+}
+nav ul li {
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: inline;
+  font-family: "Roboto";
+}
+
+main.homeContent {
+  width: 100%;
+  height: 85vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main.homeContent section {
+  font-size: 35px;
+  word-spacing: 2px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 1px rgb(237, 239, 135);
+  letter-spacing: 3px;
+}
+main.homeContent section h1,
+h3 {
+  cursor: default;
+}
+
+main.homeContent section h1 {
+  margin: 30px 0 20px 0;
+  font-size: 55px;
+  font-weight: 700;
+  text-shadow: 2px 1px 5px white;
+  text-transform: uppercase;
+  color: black;
+}
+
+main.homeContent section a {
+  padding: 12px 30px;
+  border-radius: 4px;
+  outline: none;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  color: #eee;
+}
+
+button#btn {
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  font-weight: lighter;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 200px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #bf55ec;
+}
+button#btn:hover {
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.change_content:after {
+  content: "";
+  animation: changetext 8s infinite linear;
+  color: #f23838;
+}
+/* homeContent#btn{
+  
+} */
+@keyframes changetext {
+  0% {
+    content: "Manali";
+  }
+  20% {
+    content: "Kochi";
+  }
+  35% {
+    content: "Jaipur";
+  }
+  60% {
+    content: "Udaipur";
+  }
+  80% {
+    content: "Sikkim";
+  }
+  100% {
+    content: "Goa";
+  }
+}
+change_content:after {
+  animation: changecontent 8s infinite ease-in-out;
+}
+button#toTop {
+  background-color: #e2dede;
+  color: black;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 999999;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+#toTop.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+@keyframes changecontent {
+  0% {
+    background-image: linear-gradient(
+        rgba(135, 125, 125, 0.3),
+        rgba(145, 137, 151, 0.3)
+      ),
+      url(images/manali.jpg);
+  }
+  20% {
+    background-image: linear-gradient(
+        rgba(135, 125, 125, 0.3),
+        rgba(145, 137, 151, 0.3)
+      ),
+      url(images/kochi.jpg);
+  }
+  40% {
+    background-image: linear-gradient(
+        rgba(135, 125, 125, 0.3),
+        rgba(145, 137, 151, 0.3)
+      ),
+      url(images/istockphoto.jpg);
+  }
+  60% {
+    background-image: linear-gradient(
+        rgba(135, 125, 125, 0.3),
+        rgba(145, 137, 151, 0.3)
+      ),
+      url(images/udaipur.jpeg);
+  }
+  80% {
+    background-image: linear-gradient(
+        rgba(135, 125, 125, 0.3),
+        rgba(145, 137, 151, 0.3)
+      ),
+      url(images/sikkim.jpg);
+  }
+  100% {
+    background-image: linear-gradient(
+        rgba(135, 125, 125, 0.3),
+        rgba(145, 137, 151, 0.3)
+      ),
+      url(images/goa.jpeg);
+  }
+}
+.container {
+  width: 90%;
+  height: 25%;
+}
+.man {
+  width: 150px;
+  height: 200px;
+}
+/* Content of the page */
+main.mainPages section {
+  margin-bottom: 6rem;
+}
+.background-image {
+  background-image: url("https://th.bing.com/th/id/R.745b5da0499442055c807b250e6f5f46?rik=xVHvZ2Bqa5VjbQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fL4YaX6Y.jpg&ehk=TxN6hZgkdiPjHgSunwTkq5cMM1ryRyMnnhecLQhNSHc%3d&risl=&pid=ImgRaw&r=0");
+  height: 130vh;
+  background-size: cover;
+  margin: 10px;
+}
+
+.background-image-1 {
+  background-image: url("https://th.bing.com/th/id/R.745b5da0499442055c807b250e6f5f46?rik=xVHvZ2Bqa5VjbQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fL4YaX6Y.jpg&ehk=TxN6hZgkdiPjHgSunwTkq5cMM1ryRyMnnhecLQhNSHc%3d&risl=&pid=ImgRaw&r=0");
+  height: 130vh;
+  background-size: cover;
+  padding: 80px;
+  margin: 10px;
+}
+.featured-packages-heading {
+  color: #2b1f0d;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  margin: 20px;
+  text-align: center;
+  text-decoration: underline;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.text-container {
+  padding: 12px;
+}
+.manali-container {
+  background-color: rgb(231, 200, 209);
+  border-radius: 15px;
+  margin: 70px;
+  padding: 45px;
+  width: 500px;
+  height: 600px;
+}
+.manali-heading {
+  font-style: normal;
+  color: #3a3835;
+  font-size: 35px;
+  text-align: center;
+}
+.manali-image {
+  width: 350px;
+  height: 190px;
+  padding: 15px;
+}
+.manali-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
+  width: 400;
+}
+.manali-paragraph {
+  font-size: 14px;
+}
+.manali-button {
+  background-color: #191970;
+  border-radius: 20px;
+  height: 40px;
+  width: 150px;
+}
+a button.manali-button{
+  color: #fff!important;
+  text-decoration: none!important;
+}
+.background-image-2 {
+  background-image: url("https://www.treebo.com/blog/wp-content/uploads/2016/06/Places-to-Visit-in-Manali.jpg");
+  height: 145vh;
+  background-size: cover;
+  padding: 25px;
+  margin: 10px;
+}
+.main-manali-container {
+  background-color: #191970;
+  border-radius: 12px;
+  height: 90px;
+  width: 250px;
+  margin: 10px;
+  padding: 20px;
+}
+.main-manali-heading {
+  color: antiquewhite;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 47px;
+}
+.attraction-sites-container {
+  background-color: rgb(210, 155, 155);
+  border-radius: 12px;
+  margin: 20px;
+  padding: 10px;
+}
+.attraction-sites-heading {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+.hadimba-image {
+  width: 170px;
+  height: 170px;
+  padding: 5px;
+}
+.kochi-background-image {
+  background-image: url("https://wallpapercave.com/wp/wp7526812.jpg");
+  height: 155vh;
+  background-size: cover;
+  margin: 10px;
+  padding: 25px;
+}
+.main-kochi-container {
+  background-color: #058787d2;
+  border-radius: 15px;
+  height: 90px;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+}
+.kochi-heading {
+  color: antiquewhite;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 47px;
+}
+.jaipur-image {
+  background-image: url("https://th.bing.com/th/id/R.ce79b22476ce659d596d0172127fcbde?rik=gQb5Rh5vnuHkUw&riu=http%3a%2f%2fwww.superwallpapers.in%2fhdwallpapers%2fjaipur-india-hd-wallpapers-33.jpg&ehk=uDnOl0Kc%2b38LGuDzGc3h6y%2fDwEuDB2ukf%2bC6iMFi84k%3d&risl=&pid=ImgRaw&r=0");
+  height: 130vh;
+  background-size: cover;
+  margin: 10px;
+  padding: 25px;
+}
+.jaipur-container {
+  background-color: #ba1d7dd2;
+  border-radius: 15px;
+  height: 90px;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+}
+.jaipur-heading {
+  color: rgb(235, 223, 230);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 47px;
+}
+.sikkim-image {
+  background-image: url("https://wallpaperaccess.com/full/4268742.jpg");
+  height: 140vh;
+  background-size: cover;
+  margin: 10px;
+  padding: 25px;
+}
+.sikkim-container {
+  background-color: #098337d2;
+  border-radius: 15px;
+  height: 90px;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+}
+.sikkim-heading {
+  color: rgb(235, 235, 235);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 47px;
+}
+.goa-image {
+  background-image: url("https://i.pinimg.com/originals/e4/db/d5/e4dbd549a133fa1acbb93d74f392e25d.jpg");
+  height: 140vh;
+  background-size: cover;
+  margin: 10px;
+  padding: 25px;
+}
+.goa-container {
+  background-color: #e7cc45d2;
+  border-radius: 15px;
+  height: 90px;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+}
+.goa-heading {
+  color: rgb(23, 21, 21);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 47px;
+}
+
+/********************** About US *********************** */
+
+section#aboutUs{
+margin-left: 20px;
+}
+section#aboutUs div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#aboutUs div#bgImg{
+  background: url("Images/aboutImg1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  animation: image 6s infinite alternate;
+}
+
+@keyframes image {
+  0% {
+    background-image: url('images/aboutImg1.webp');
+  }
+  50% {
+    background-image: url('images/aboutImg2.jpg');
+  }
+  100% {
+    background-image: url('images/aboutImg3.webp');
+  }
+}
+
+#aboutUs h1{
+  text-align: center;
+  margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+#aboutUs h3{
+  margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+/********************** Footer *********************** */
+
+footer{
+  background-color: #434A54;
+  width: 100%;
+  height: 20em;
+  padding: 30px;
+  padding-top: 40px;
+  color: #fff;
+}
+
+footer h5{
+  text-transform: uppercase;
+  color: #B1BAC3;
+}
+
+footer img{
+  padding-right: 7px;
+  transition: .3s ease-in-out;
+}
+
+footer img:hover{
+  opacity: .5;
+}
